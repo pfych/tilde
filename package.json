@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Repo for tilde town site",
   "scripts": {
-    "build-scss": "sass ./src/style.scss ./build/style.css",
+    "build-scss": "sass ./src/style.scss ./build/style.css && sass ./src/blog/style.scss ./build/blog/style.css",
     "build-html": "cp ./src/index.html ./build/index.html",
     "build": "yarn run build-scss && yarn run build-html"
   },
@@ -16,7 +16,10 @@
     "stylelint-config-sass-guidelines": "^8.0.0"
   },
   "stylelint": {
-    "extends": "stylelint-config-sass-guidelines"
+    "extends": "stylelint-config-sass-guidelines",
+    "rules": {
+      "selector-max-id": 1
+    }
   },
   "prettier": {
     "trailingComma": "es5",
