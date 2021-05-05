@@ -1,0 +1,27 @@
+{
+  "name": "tilde",
+  "version": "1.0.0",
+  "description": "Repo for tilde town site",
+  "scripts": {
+    "build-scss": "sass ./src/style.scss ./build/style.css",
+    "build-html": "cp ./src/index.html ./build/index.html",
+    "build": "yarn run build-scss && yarn run build-html"
+  },
+  "author": "pfych",
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "^2.2.1",
+    "sass": "^1.32.12",
+    "stylelint": "^13.13.1",
+    "stylelint-config-sass-guidelines": "^8.0.0"
+  },
+  "stylelint": {
+    "extends": "stylelint-config-sass-guidelines"
+  },
+  "prettier": {
+    "trailingComma": "es5",
+    "tabWidth": 4,
+    "semi": false,
+    "singleQuote": true
+  }
+}
