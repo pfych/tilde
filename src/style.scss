@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;900&display=swap');
+
+@mixin left-bar($offset: -10px) {
+  @media screen and (min-width: 70ch) {
+    position: relative;
+
+    &::before {
+      background-color: #000;
+      content: '';
+      height: 100%;
+      left: $offset;
+      position: absolute;
+      top: 0;
+      width: 2.5px;
+    }
+  }
+}
+
+.container {
+  margin: auto;
+  max-width: 70ch;
+
+  * {
+    font-family: 'Roboto', sans-serif;
+  }
+
+  p {
+    @include left-bar;
+
+    font-weight: 400;
+  }
+
+  a {
+    color: #090909;
+    font-weight: 500;
+  }
+
+  h1,
+  h2 {
+    font-weight: 900;
+  }
+}
