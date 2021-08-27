@@ -9,7 +9,7 @@ $foreground: #fff;
   @media screen and (min-width: 70ch) {
     position: relative;
 
-    &::before {
+    &:not(.no-edge)::before {
       background-color: $foreground;
       content: '';
       height: 100%;
