@@ -6,18 +6,16 @@ $background: #000;
 $foreground: #fff;
 
 @mixin left-bar($offset: -10px) {
-  @media screen and (min-width: 70ch) {
-    position: relative;
+  position: relative;
 
-    &:not(.no-edge)::before {
-      background-color: $foreground;
-      content: '';
-      height: 100%;
-      left: $offset;
-      position: absolute;
-      top: 0;
-      width: 2.5px;
-    }
+  &:not(.no-edge)::before {
+    background-color: $foreground;
+    content: '';
+    height: 100%;
+    left: $offset;
+    position: absolute;
+    top: 0;
+    width: 2.5px;
   }
 }
 
@@ -66,10 +64,6 @@ body {
   min-height: 100vh;
   position: relative;
 
-  @media screen and (max-width: 70ch) {
-    padding: 10px;
-  }
-
   &::before {
     background-image: url($noise-texture);
     content: '';
@@ -85,6 +79,10 @@ body {
 #tlogs,
 #meta {
   @include perfect-ratio;
+
+  @media screen and (max-width: 70ch) {
+    margin: 20px;
+  }
 
   * {
     font-family: 'Roboto', sans-serif;
