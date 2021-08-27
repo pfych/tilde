@@ -4,7 +4,7 @@
   "description": "Repo for tilde town site",
   "scripts": {
     "build-scss": "stylelint ./src/style.scss --fix && sass ./src/style.scss ./build/style.css",
-    "build-html": "cp ./src/index.html ./build/index.html",
+    "build-html": "cp ./src/index.html ./build/index.html && cp -r ./src/cruel ./build",
     "build": "yarn run build-scss && yarn run build-html"
   },
   "author": "pfych",
